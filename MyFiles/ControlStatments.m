@@ -26,7 +26,7 @@ elseif degrees(1) >=50
 else
     'Level::Fail'
 end
-#
+%
 
 %% for loop
 
@@ -35,7 +35,7 @@ end
 % end
 % you can use break, continue
 
-%length -- largest dimension, size --- #rows and cols, numel -- #of all
+%length -- largest dimension, size --- %rows and cols, numel -- %of all
 %elements r*c
 
 for r=1:1:size(degrees,1)
@@ -60,4 +60,4 @@ for i=1:50
     end
     i
 end
-#
+%
