@@ -12,7 +12,7 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % imread : Reading images as array.
-I = imread('./images/apple-1.gif');
+I = imread('./images/Orange_violet_pansies.jpg');
 I = imread('./images/cameraman.jpg');
 
 % imshow : to preview the imread data as image inside figure.
@@ -26,6 +26,14 @@ figure('Name', 'Testing plot');
 
 % plot : to draw expresions inside a figure
 plot([1:10],[2:2:20], '-.k');
+
+% bar : to draw anything as bars (help me & describe more)
+bar(1);
+bar([9 4 1 0 1 4 9]);
+
+% stem : to draw as steams
+stem(1);
+stem([9 4 1 0 1 4 9]);
 
 % hold on -> hold off : to make same figure hold more than one plot
 hold on;   % next plot will be drawn in the same figure
@@ -58,6 +66,9 @@ subplot(2,2,4);
 % legend : work with hold on to make legend preview the expresions' names
 legend('Y', 'Z');
 
+% imcomplement : To get the image complement making black->white & white->black
+imcomplement(I);
+
 % imadjust : power nthroot
 imadjust(I, [], [], 0.5);
 
@@ -71,4 +82,5 @@ x = imhist(I); % will make a plot with a image for the histogram
 x = imhist(I,256); % same as above , the second number is #pins
 x = imhist(I,4); % will make the #pins to 4
 [x,y] = imhist(I,256); % x as previos , y = 0:255 (= linspace(0, 255, 256))
+% see plot(y, x) , bar(x) , stem(x) for more inofrmation about what is y & x
 

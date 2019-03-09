@@ -1,30 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%plot using plot
-subplot(1,5,3);
-plot(l, h);
-axis('square');
-axis([0 Inf 0 Inf]);
 
-%plot using bar
-subplot(1,5,4);
-bar(h);
-axis('square');
-axis([0 Inf 0 Inf]);
-
-%plot using stem
-subplot(1,5,5);
-stem(h);
-axis('square');
-axis([0 Inf 0 Inf]);
-
-
-%%%%%%
-subplot(2,5,6);
-imhist(f);
-axis([0 Inf 0 Inf]);
-%%%%%%
 g1 = imcomplement(f);
 subplot(2,5,2);
 imshow(g1, 'InitialMagnification', 'fit');
