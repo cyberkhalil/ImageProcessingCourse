@@ -12,8 +12,8 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % imread : Reading images as array.
-I = imread('/home/khalil2535/Octave/lab_session/images/binary/apple-1.gif');
-I = imread('/home/khalil2535/Octave/lab_session/images/cameraman.jpg');
+I = imread('./images/apple-1.gif');
+I = imread('./images/cameraman.jpg');
 
 % imshow : to preview the imread data as image inside figure.
 imshow(I);
@@ -43,6 +43,12 @@ title('square equation');
 % grid on : to make the plot background grid
 grid on;
 
+% axis : to make the 
+axis('square'); % Force a square axis aspect ratio.
+axis("equal"); % Force x-axis unit distance to equal y-axis.
+axis('normal'); % Restore ratio to default.
+axis([0 Inf 0 Inf]); % scale the image
+
 % scatter : to draw exprestion as circles
 scatter([1:10],[2:2:20]);
 
@@ -58,3 +64,11 @@ imadjust(I, [], [], 0.5);
 
 % stretchlim : return [low ; high] for an image
 x = stretchlim(I);
+
+
+% imhist : return the histogram for an image
+x = imhist(I); % will make a plot with a image for the histogram
+x = imhist(I,256); % same as above , the second number is #pins
+x = imhist(I,4); % will make the #pins to 4
+[x,y] = imhist(I,256); % x as previos , y = 0:255 (= linspace(0, 255, 256))
+
