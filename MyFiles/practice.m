@@ -1,23 +1,52 @@
 %% settings
 close all; clear all; clc;
 
+% filters
+average = fspecial('average',3);
+disk = fspecial('disk',3);
+log = fspecial('log',3); %laplacian
 
-%% code start here %%
-disp(' Loop based code')
-tic
-i = 0;
-for t = 0:.01:10^4
-    i = i + 1;
-    y2(i) = sin(t);
-end
-toc
- 
-disp(' Vectorized code')
-tic
-t = 0:.01:10^4;
-y1 = sin(t);
-toc
-isequal(y1,y2)
+I = imread('images/cameraman.jpg');
+x_size = 2;
+y_size = 2;
+
+subplot(x_size,y_size,1);
+imshow(I);
+
+
+subplot(x_size,y_size,2);
+imhist(I);
+
+
+subplot(x_size,y_size,3);
+f = log;
+m = imfilter(I,f);
+imshow(m);
+
+
+subplot(x_size,y_size,4);
+imhist(m);
+
+
+
+
+%
+%%% code start here %%
+%disp(' Loop based code')
+%tic
+%i = 0;
+%for t = 0:.01:10^4
+%    i = i + 1;
+%    y2(i) = sin(t);
+%end
+%toc
+% 
+%disp(' Vectorized code')
+%tic
+%t = 0:.01:10^4;
+%y1 = sin(t);
+%toc
+%isequal(y1,y2)
 %%
 %%%% Histogram
 %%

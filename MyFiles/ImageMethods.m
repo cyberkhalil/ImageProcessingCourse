@@ -12,10 +12,10 @@ clc;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % imread : Reading images as array.
-I = imread('./images/Orange_violet_pansies.jpg');   % 1200x800 (1.0MP)  colored
-I = imread('./images/cameraman.jpg');               % 512x512 (0.3MP)   gray
-I = imread('./images/Tibia_insulaechorab.jpg');     % 3600x2700 (9.7MP) colored
-I = imread('./images/MAGICC_logo_small.jpg');       % 400x400 (0.2MP)   colored
+I = imread('./images/Orange_violet_pansies.jpg'); % 1200x800  (1.0MP) colored
+I = imread('./images/cameraman.jpg');             % 512x512   (0.3MP) gray
+I = imread('./images/Tibia_insulaechorab.jpg');   % 3600x2700 (9.7MP) colored
+I = imread('./images/MAGICC_logo_small.jpg');     % 400x400   (0.2MP) colored
 
 % imshow : to preview the imread data as image inside figure.
 imshow(I);
@@ -74,10 +74,8 @@ imcomplement(I);
 % imadjust : power nthroot
 imadjust(I, [], [], 0.5);
 
-
 % stretchlim : return [low ; high] for an image
 x = stretchlim(I);
-
 
 % imhist : return the histogram for an image
 x = imhist(I); % will make a plot with a image for the histogram
