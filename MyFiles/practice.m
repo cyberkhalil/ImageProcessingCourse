@@ -1,35 +1,22 @@
-%% settings
+% settings
 close all; clear all; clc;
 
-% filters
-average = fspecial('average',3);
-disk = fspecial('disk',3);
-log = fspecial('log',3); %laplacian
+f = double(imread('images/cameraman.jpg'));
 
-I = imread('images/cameraman.jpg');
-x_size = 2;
-y_size = 2;
+tic
+image_width = size(f,1);
+image_height = size(f,2);
 
-subplot(x_size,y_size,1);
-imshow(I);
+for row = 1 : image_height
+  for column = 1: image_width
+    element = f(row,column);
+    g2 = dec2binvec(element,8);
+    end
+end
+toc
+%
 
-
-subplot(x_size,y_size,2);
-imhist(I);
-
-
-subplot(x_size,y_size,3);
-f = log;
-m = imfilter(I,f);
-imshow(m);
-
-
-subplot(x_size,y_size,4);
-imhist(m);
-
-
-
-
+%
 %
 %%% code start here %%
 %disp(' Loop based code')
@@ -46,8 +33,59 @@ imhist(m);
 %t = 0:.01:10^4;
 %y1 = sin(t);
 %toc
+%
+%
 %isequal(y1,y2)
-%%
+%
+%
+%% images test
+%
+%f = double(imread('images/cameraman.tif'));
+%% 512 * 512 pixel (262144 pixel)
+%
+%tic
+%  g1 = dec2bin(f);
+%toc
+%
+%tic
+%i = 1;
+%for t = 1:262144        % 512*512
+%  g2(i,8:-1:1) = dec2binvec(f(t),8);
+%  i = i+1;
+%end;
+%toc
+%
+
+%
+%% filters
+%average = fspecial('average',3);
+%disk = fspecial('disk',3);
+%log = fspecial('log',3); %laplacian
+%
+%I = imread('images/cameraman.jpg');
+%x_size = 2;
+%y_size = 2;
+%
+%subplot(x_size,y_size,1);
+%imshow(I);
+%
+%
+%subplot(x_size,y_size,2);
+%imhist(I);
+%
+%
+%subplot(x_size,y_size,3);
+%f = log;
+%m = imfilter(I,f);
+%imshow(m);
+%
+%
+%subplot(x_size,y_size,4);
+%imhist(m);
+%
+
+
+%
 %%%% Histogram
 %%
 %%

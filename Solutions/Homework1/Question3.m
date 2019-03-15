@@ -1,6 +1,6 @@
 function Question3(h,evt,f)
 % h and evt are unused but is written for matlab compilability
-
+tic
 x = 2; % number of images on x axsis
 y = 4; % number of images on y axsis
 [width , height] = size(f);
@@ -24,6 +24,7 @@ imshow(uint8(f_final));
 title([num2str(i) '-bit']);
 disp([num2str(i) '-bit done'])
 end
+toc
 end
 %%%% PS : the way above is the fastest way i got to do the
 %%%% same work , below i used (dec2binvec -> decimalToBinaryVector,
