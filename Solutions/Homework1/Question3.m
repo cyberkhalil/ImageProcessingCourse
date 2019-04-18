@@ -26,21 +26,3 @@ disp([num2str(i) '-bit done'])
 end
 toc
 end
-%%%% PS : the way above is the fastest way i got to do the
-%%%% same work , below i used (dec2binvec -> decimalToBinaryVector,
-%%%%                             binvec2dec -> binaryVectorToDecimal)
-%%%%              methods :
-%
-%for n=1:2
-%    for i=1:512
-%        for j=1:512
-%            dec_to_bin = fliplr(dec2binvec(double(f(i,j)),8));
-%            f_bin = dec_to_bin(1:n);
-%            f_bin = fliplr(f_bin);
-%            g(i,j) = binvec2dec(permute(f_bin, [3 2 1]));
-%        end
-%    end
-%    subplot(x,y,n);
-%    imshow(g);
-%end
-%
