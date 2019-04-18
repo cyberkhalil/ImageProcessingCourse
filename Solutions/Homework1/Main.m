@@ -5,7 +5,7 @@ clc;
 
 %% to get an image
 try
-    f = imread('./cameraman.tif');
+    f = imread('cameraman.tif');
 catch e
     [filename, folder] = uigetfile('*','Select an Image (camera man is recommended)');
     f = imread([folder filename]);
