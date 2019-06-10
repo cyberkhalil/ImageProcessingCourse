@@ -17,4 +17,8 @@ Content
 &emsp;&emsp;↳ **[HomeWork2](https://github.com/khalil2535/ImageProcessingCourse/tree/master/Solutions/Homework2)**<br>
 &emsp;&emsp;↳ **[HomeWork3](https://github.com/khalil2535/ImageProcessingCourse/tree/master/Solutions/Homework3)**<br>
 &emsp;&emsp;↳ **[HomeWork4](https://github.com/khalil2535/ImageProcessingCourse/tree/master/Solutions/Homework4)**<br>
-&emsp;&emsp;↳ **[Exercise1](https://github.com/khalil2535/ImageProcessingCourse/tree/master/Solutions/Exercise1)**  (not completed, i need your help on !)  <br>
+&emsp;&emsp;↳ **[Exercise1](https://github.com/khalil2535/ImageProcessingCourse/tree/master/Solutions/Exercise1)**  (not completed, i need your help on !)  <br><br><br>
+
+Licese : <a href="https://www.gnu.org/licenses/old-licenses/gpl-3.0.en.html">GPL v3</a>
+----
+All the code is under GPL v3.
