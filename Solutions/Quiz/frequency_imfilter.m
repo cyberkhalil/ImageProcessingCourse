@@ -1,5 +1,6 @@
     function [fltrd_img,f_img,fltrd_f_img]=frequency_imfilter(img,filter)
-    % this function do same as imfilter but work on the frequency domain    
+    % this function do same as imfilter but work on the frequency domain
+    % for rgb images
         [img, revertclass] = tofloat(img);
         [M,N,bad] = size(img);
         if(bad==0)
