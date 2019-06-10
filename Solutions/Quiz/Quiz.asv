@@ -1,6 +1,0 @@
-close all;clear all;clc;
-
-imfilter = @frequency_imfilter;
-
-img = imread('old_man.PNG');
-img2 = imread();
